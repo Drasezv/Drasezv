@@ -22,7 +22,7 @@ THEMES = {
 }
 
 LINES = [
-    ("role", "DevOps / security / infrastructure"),
+    ("role", "DevSecOps / infrastructure"),
     ("stack", "Linux, Docker, Python, Bash, MQTT"),
     ("shipping", "cctab"),
 ]
@@ -70,7 +70,7 @@ def card(theme, rows):
     pad = 28
     tx = pad + art_cols * CHAR_W + 32
     key_w, total = 11, 44
-    head = f"{USER.lower()}@{USER.lower()}"
+    head = f"{USER.lower()}@root"
     body = [("head", head), ("rule", "-" * len(head))]
     body += [("kv", k, v) for k, v in LINES]
     body += [("gap",), ("sub", "github")]
