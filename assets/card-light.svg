@@ -1,42 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="764" height="336" viewBox="0 0 764 336" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14">
-<rect x="0.5" y="0.5" width="763" height="335" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="336" viewBox="0 0 880 336" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14">
+<style>@keyframes in{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:translateX(0)}}text{opacity:0;animation:in .45s ease-out forwards}@media (prefers-reduced-motion:reduce){text{animation-duration:.01s}}</style>
+<defs><linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="284.8" y2="336"><stop offset="0" stop-color="#24292f"/><stop offset="0.42" stop-color="#24292f"/><stop offset="0.5" stop-color="#0969da"/><stop offset="0.58" stop-color="#24292f"/><stop offset="1" stop-color="#24292f"/><animateTransform attributeName="gradientTransform" type="translate" from="-341.76 0" to="341.76 0" dur="3.2s" begin="1s" repeatCount="indefinite"/></linearGradient></defs>
+<rect x="0.5" y="0.5" width="879" height="335" rx="10" fill="#ffffff" stroke="#d0d7de"/>
 <g xml:space="preserve">
-<text x="36.9" y="43.0" textLength="204.7" lengthAdjust="spacingAndGlyphs" fill="#24292f">.@@@@@@@@@@@@@@@@@@%*=:</text>
-<text x="36.9" y="63.0" textLength="231.4" lengthAdjust="spacingAndGlyphs" fill="#24292f">.@%%@+----------=+*%@@@@#=</text>
-<text x="45.8" y="83.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="223.8" y="83.0" textLength="62.3" lengthAdjust="spacingAndGlyphs" fill="#24292f">.+@@@@+</text>
-<text x="45.8" y="103.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="250.5" y="103.0" textLength="53.4" lengthAdjust="spacingAndGlyphs" fill="#24292f">+@%@@.</text>
-<text x="45.8" y="123.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="259.4" y="123.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">.@%%@</text>
-<text x="45.8" y="143.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="268.3" y="143.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">-@%%%</text>
-<text x="45.8" y="163.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="277.2" y="163.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="45.8" y="183.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="197.1" y="183.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">-*##=</text>
-<text x="277.2" y="183.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="45.8" y="203.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="179.3" y="203.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">+@@@=</text>
-<text x="268.3" y="203.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">*%#@+</text>
-<text x="45.8" y="223.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@</text>
-<text x="152.6" y="223.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">:#@@*</text>
-<text x="259.4" y="223.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">+@#@%</text>
-<text x="45.8" y="243.0" textLength="133.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%%@@@@@@@@@@=</text>
-<text x="250.5" y="243.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">#%%@*</text>
-<text x="45.8" y="263.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%@.</text>
-<text x="223.8" y="263.0" textLength="62.3" lengthAdjust="spacingAndGlyphs" fill="#24292f">:#@@@#.</text>
-<text x="45.8" y="283.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%%%-</text>
-<text x="161.5" y="283.0" textLength="97.9" lengthAdjust="spacingAndGlyphs" fill="#24292f">.:-=*%@@@%+</text>
-<text x="45.8" y="303.0" textLength="186.9" lengthAdjust="spacingAndGlyphs" fill="#24292f">@%@@@@@@@@@@@@@@@%#+:</text>
-<text x="344.8" y="83.0" textLength="106.8" lengthAdjust="spacingAndGlyphs" fill="#0969da" font-weight="700">drasezv@root</text>
-<text x="344.8" y="103.0" textLength="106.8" lengthAdjust="spacingAndGlyphs" fill="#afb8c1">------------</text>
-<text x="344.8" y="123.0" textLength="347.1" lengthAdjust="spacingAndGlyphs"><tspan fill="#0969da">role</tspan><tspan fill="#afb8c1"> ....... </tspan><tspan fill="#24292f">DevSecOps / infrastructure</tspan></text>
-<text x="344.8" y="143.0" textLength="409.4" lengthAdjust="spacingAndGlyphs"><tspan fill="#0969da">stack</tspan><tspan fill="#afb8c1"> ...... </tspan><tspan fill="#24292f">Linux, Docker, Python, Bash, MQTT</tspan></text>
-<text x="344.8" y="163.0" textLength="160.2" lengthAdjust="spacingAndGlyphs"><tspan fill="#0969da">shipping</tspan><tspan fill="#afb8c1"> ... </tspan><tspan fill="#24292f">cctab</tspan></text>
-<text x="344.8" y="203.0" textLength="391.6" lengthAdjust="spacingAndGlyphs" fill="#afb8c1">-- github ----------------------------------</text>
-<text x="344.8" y="223.0" textLength="186.9" lengthAdjust="spacingAndGlyphs"><tspan fill="#0969da">uptime</tspan><tspan fill="#afb8c1"> ..... </tspan><tspan fill="#24292f">9 months</tspan></text>
-<text x="344.8" y="243.0" textLength="186.9" lengthAdjust="spacingAndGlyphs"><tspan fill="#0969da">repos</tspan><tspan fill="#afb8c1"> ...... </tspan><tspan fill="#24292f">2 public</tspan></text>
-<text x="344.8" y="263.0" textLength="204.7" lengthAdjust="spacingAndGlyphs"><tspan fill="#0969da">last push</tspan><tspan fill="#afb8c1"> .. </tspan><tspan fill="#24292f">2026-09-24</tspan></text>
+<text x="36.9" y="43.0" textLength="204.7" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.00s">.@@@@@@@@@@@@@@@@@@%*=:</text>
+<text x="36.9" y="63.0" textLength="231.4" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.04s">.@%%@+----------=+*%@@@@#=</text>
+<text x="45.8" y="83.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.08s">@%%@</text>
+<text x="223.8" y="83.0" textLength="62.3" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.08s">.+@@@@+</text>
+<text x="45.8" y="103.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.12s">@%%@</text>
+<text x="250.5" y="103.0" textLength="53.4" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.12s">+@%@@.</text>
+<text x="45.8" y="123.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.16s">@%%@</text>
+<text x="259.4" y="123.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.16s">.@%%@</text>
+<text x="45.8" y="143.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.20s">@%%@</text>
+<text x="268.3" y="143.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.20s">-@%%%</text>
+<text x="45.8" y="163.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.24s">@%%@</text>
+<text x="277.2" y="163.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.24s">@%%@</text>
+<text x="45.8" y="183.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.28s">@%%@</text>
+<text x="197.1" y="183.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.28s">-*##=</text>
+<text x="277.2" y="183.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.28s">@%%@</text>
+<text x="45.8" y="203.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.32s">@%%@</text>
+<text x="179.3" y="203.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.32s">+@@@=</text>
+<text x="268.3" y="203.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.32s">*%#@+</text>
+<text x="45.8" y="223.0" textLength="35.6" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.36s">@%%@</text>
+<text x="152.6" y="223.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.36s">:#@@*</text>
+<text x="259.4" y="223.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.36s">+@#@%</text>
+<text x="45.8" y="243.0" textLength="133.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.40s">@%%%@@@@@@@@@@=</text>
+<text x="250.5" y="243.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.40s">#%%@*</text>
+<text x="45.8" y="263.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.44s">@%%@.</text>
+<text x="223.8" y="263.0" textLength="62.3" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.44s">:#@@@#.</text>
+<text x="45.8" y="283.0" textLength="44.5" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.48s">@%%%-</text>
+<text x="161.5" y="283.0" textLength="97.9" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.48s">.:-=*%@@@%+</text>
+<text x="45.8" y="303.0" textLength="186.9" lengthAdjust="spacingAndGlyphs" fill="url(#sheen)" style="animation-delay:0.52s">@%@@@@@@@@@@@@@@@%#+:</text>
+<text x="344.8" y="83.0" textLength="106.8" lengthAdjust="spacingAndGlyphs" fill="#0969da" font-weight="700" style="animation-delay:0.35s">drasezv@root</text>
+<text x="344.8" y="103.0" textLength="106.8" lengthAdjust="spacingAndGlyphs" fill="#afb8c1" style="animation-delay:0.42s">------------</text>
+<text x="344.8" y="123.0" textLength="364.9" lengthAdjust="spacingAndGlyphs" style="animation-delay:0.49s"><tspan fill="#0969da">role</tspan><tspan fill="#afb8c1"> ....... </tspan><tspan fill="#24292f">infrastructure / self-hosted</tspan></text>
+<text x="344.8" y="143.0" textLength="489.5" lengthAdjust="spacingAndGlyphs" style="animation-delay:0.56s"><tspan fill="#0969da">stack</tspan><tspan fill="#afb8c1"> ...... </tspan><tspan fill="#24292f">Linux, Docker, Python, Bash, Ansible, MQTT</tspan></text>
+<text x="344.8" y="163.0" textLength="258.1" lengthAdjust="spacingAndGlyphs" style="animation-delay:0.63s"><tspan fill="#0969da">shipping</tspan><tspan fill="#afb8c1"> ... </tspan><tspan fill="#24292f">cctab, homewatch</tspan></text>
+<text x="344.8" y="203.0" textLength="507.3" lengthAdjust="spacingAndGlyphs" fill="#afb8c1" style="animation-delay:0.77s">-- github -----------------------------------------------</text>
+<text x="344.8" y="223.0" textLength="204.7" lengthAdjust="spacingAndGlyphs" style="animation-delay:0.84s"><tspan fill="#0969da">on github</tspan><tspan fill="#afb8c1"> .. </tspan><tspan fill="#24292f">2025-12-04</tspan></text>
+<text x="344.8" y="243.0" textLength="186.9" lengthAdjust="spacingAndGlyphs" style="animation-delay:0.91s"><tspan fill="#0969da">repos</tspan><tspan fill="#afb8c1"> ...... </tspan><tspan fill="#24292f">3 public</tspan></text>
+<text x="344.8" y="263.0" textLength="204.7" lengthAdjust="spacingAndGlyphs" style="animation-delay:0.98s"><tspan fill="#0969da">last push</tspan><tspan fill="#afb8c1"> .. </tspan><tspan fill="#24292f">2026-09-25</tspan></text>
 </g>
 </svg>

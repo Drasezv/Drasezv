@@ -22,9 +22,9 @@ THEMES = {
 }
 
 LINES = [
-    ("role", "DevSecOps / infrastructure"),
-    ("stack", "Linux, Docker, Python, Bash, MQTT"),
-    ("shipping", "cctab"),
+    ("role", "infrastructure / self-hosted"),
+    ("stack", "Linux, Docker, Python, Bash, Ansible, MQTT"),
+    ("shipping", "cctab, homewatch"),
 ]
 
 FONT = "ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace"
@@ -54,10 +54,10 @@ def uptime(since):
 def stats():
     user = api(f"/users/{USER}")
     repos = api(f"/users/{USER}/repos?per_page=100&type=owner")
-    own = [r for r in repos if not r["fork"] and r["name"] != USER]
-    last = max((r["pushed_at"] for r in own), default=user["created_at"])
+    own = [r for r in repos if not r["fork"]]
+    last = max((r["pushed_at"] for r in own if r["name"] != USER), default=user["created_at"])
     return [
-        ("uptime", uptime(datetime.fromisoformat(user["created_at"].replace("Z", "+00:00")))),
+        ("on github", user["created_at"][:10]),
         ("repos", f"{len(own)} public"),
         ("last push", last[:10]),
     ]
@@ -68,8 +68,11 @@ def card(theme, rows):
     art = (ROOT / "scripts" / "art.txt").read_text(encoding="utf-8").rstrip("\n").split("\n")
     art_cols = max(len(a) for a in art)
     pad = 28
-    tx = pad + art_cols * CHAR_W + 32
-    key_w, total = 11, 44
+    art_w = art_cols * CHAR_W
+    tx = pad + art_w + 32
+    key_w = 11
+    rows_all = list(LINES) + list(rows)
+    total = max(24, max(key_w + 2 + len(v) for _, v in rows_all) + 2)
     head = f"{USER.lower()}@root"
     body = [("head", head), ("rule", "-" * len(head))]
     body += [("kv", k, v) for k, v in LINES]
@@ -78,8 +81,23 @@ def card(theme, rows):
 
     h = pad * 2 + max(len(art), len(body)) * LINE_H
     w = int(tx + total * CHAR_W + pad)
+    css = ("<style>"
+           "@keyframes in{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:translateX(0)}}"
+           "text{opacity:0;animation:in .45s ease-out forwards}"
+           "@media (prefers-reduced-motion:reduce){text{animation-duration:.01s}}"
+           "</style>")
+    grad = (f'<linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{art_w}" y2="{h}">'
+            f'<stop offset="0" stop-color="{t["art"]}"/>'
+            f'<stop offset="0.42" stop-color="{t["art"]}"/>'
+            f'<stop offset="0.5" stop-color="{t["key"]}"/>'
+            f'<stop offset="0.58" stop-color="{t["art"]}"/>'
+            f'<stop offset="1" stop-color="{t["art"]}"/>'
+            f'<animateTransform attributeName="gradientTransform" type="translate" '
+            f'from="{-art_w * 1.2} 0" to="{art_w * 1.2} 0" dur="3.2s" begin="1s" '
+            f'repeatCount="indefinite"/></linearGradient>')
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
            f'viewBox="0 0 {w} {h}" font-family="{FONT}" font-size="{SIZE}">',
+           css, f'<defs>{grad}</defs>',
            f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="10" '
            f'fill="{t["bg"]}" stroke="{t["border"]}"/>',
            '<g xml:space="preserve">']
@@ -95,25 +113,27 @@ def card(theme, rows):
             start = line.index(word)
             line = line[:start] + " " * len(word) + line[start + len(word):]
             out.append(f'<text x="{pad + start * CHAR_W:.1f}" y="{y:.1f}" {fit(len(word))} '
-                       f'fill="{t["art"]}">{escape(word)}</text>')
+                       f'fill="url(#sheen)" style="animation-delay:{i * 0.04:.2f}s">'
+                       f'{escape(word)}</text>')
 
     body_y = pad + (h - pad * 2 - len(body) * LINE_H) / 2
     for i, line in enumerate(body):
         y = body_y + (i + 0.75) * LINE_H
+        delay = f' style="animation-delay:{0.35 + i * 0.07:.2f}s"'
         kind = line[0]
         if kind == "head":
             out.append(f'<text x="{tx}" y="{y}" {fit(len(line[1]))} fill="{t["key"]}" '
-                       f'font-weight="700">{escape(line[1])}</text>')
+                       f'font-weight="700"{delay}>{escape(line[1])}</text>')
         elif kind == "rule":
-            out.append(f'<text x="{tx}" y="{y}" {fit(len(line[1]))} fill="{t["dim"]}">{line[1]}</text>')
+            out.append(f'<text x="{tx}" y="{y}" {fit(len(line[1]))} fill="{t["dim"]}"{delay}>{line[1]}</text>')
         elif kind == "sub":
             label = f"-- {line[1]} " + "-" * (total - len(line[1]) - 4)
-            out.append(f'<text x="{tx}" y="{y}" {fit(len(label))} fill="{t["dim"]}">{label}</text>')
+            out.append(f'<text x="{tx}" y="{y}" {fit(len(label))} fill="{t["dim"]}"{delay}>{label}</text>')
         elif kind == "kv":
             k, v = line[1], line[2]
             dots = "." * max(2, key_w - len(k))
             n = len(k) + len(dots) + 2 + len(v)
-            out.append(f'<text x="{tx}" y="{y}" {fit(n)}><tspan fill="{t["key"]}">{escape(k)}</tspan>'
+            out.append(f'<text x="{tx}" y="{y}" {fit(n)}{delay}><tspan fill="{t["key"]}">{escape(k)}</tspan>'
                        f'<tspan fill="{t["dim"]}"> {dots} </tspan>'
                        f'<tspan fill="{t["text"]}">{escape(v)}</tspan></text>')
     out += ["</g>", "</svg>"]
